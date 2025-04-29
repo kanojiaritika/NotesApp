@@ -1,0 +1,127 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+
+  background: #757f9a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #d7dde8,
+    #757f9a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #d7dde8,
+    #757f9a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: #333;
+}
+
+.topBar {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+#add {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: #383737;
+  color: white;
+  border: none;
+  /* border-radius: 10px; */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#add:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+#taskArea {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.task {
+  background-color: #ffffff;
+  padding: 1rem;
+  /* border-radius: 10px; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.task:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.task input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  /* border-radius: 5px; */
+  transition: border-color 0.3s;
+}
+
+.task input[type="text"]:focus {
+  border-color: #66a6ff;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.task button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  /* border-radius: 5px; */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.task button:hover {
+  transform: scale(1.05);
+}
+
+.saveBtn {
+  background-color: #10b423;
+  color: #fff;
+}
+
+.saveBtn:hover {
+  background-color: #0a8212;
+}
+
+.deleteBtn {
+  background-color: #d20d0d;
+  color: #fff;
+}
+
+.deleteBtn:hover {
+  background-color: #8d0e0e;
+}
